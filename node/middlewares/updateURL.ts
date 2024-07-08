@@ -71,7 +71,7 @@ export async function updateURL(_ctx: any) {
           );
           const newURL = chamada?.data?.internal?.save?.from ?? "";
           console.log(
-            `O produto ${productId} foi atualizado, com a URL ${newURL}`
+            `O produto ${productId} foi atualizado com a URL ${newURL}`
           );
           const {
             vtex: { logger },
