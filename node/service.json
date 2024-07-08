@@ -1,0 +1,24 @@
+{
+  "memory": 1024,
+  "ttl": 60,
+  "timeout": 5,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 8,
+  "routes": {
+    "endpointNotification": {
+      "path": "/_v/broadcaster",
+      "public": true
+    }
+  },
+  "events":{
+    "update": {
+      "sender": "desafioonboarding30.url-translater-auto",
+      "keys": [ "update.url" ]
+    },
+    "broadcasterNotification": {
+      "sender": "vtex.broadcaster",
+      "keys": [ "broadcaster.notification" ]
+    }
+  }
+}

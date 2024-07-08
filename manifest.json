@@ -1,0 +1,103 @@
+{
+  "name": "url-translater-auto",
+  "vendor": "desafioonboarding30",
+  "version": "0.0.0",
+  "title": "URL Auto Translate",
+  "description": "URL Auto Translate en-US",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.catalog-graphql": "1.x",
+    "vtex.search-graphql": "0.x",
+    "vtex.store-graphql": "2.x",
+    "vtex.tenant-graphql": "0.x",
+    "vtex.graphql-server": "1.x",
+    "vtex.broadcaster": "0.x",
+    "vtex.rewriter": "1.x",
+    "vtex.messages": "1.x",
+    "vtex.catalog-api-proxy": "0.x"
+  },
+  "builders": {
+    "node": "6.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vtex.catalog-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.search-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.store-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.graphql-server:resolve-graphql"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "graphql-query"
+    },
+    {
+      "name": "vtex.messages:graphql-save-translation-messages"
+    },
+    {
+      "name": "vtex.search-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "vtex.rewriter:resolve-graphql"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "URL Translation",
+    "type": "object",
+    "properties": {
+      "bindingId": {
+        "title": "Binding Id",
+        "description": "Id of the binding you want to translate to",
+        "type": "string"
+      },
+      "locale": {
+        "title": "Locale ",
+        "description": "Example: pt-BR or en-US",
+        "type": "string"
+      }
+    }
+  }
+}
