@@ -1,10 +1,10 @@
 {
   "name": "url-translater-auto",
-  "vendor": "desafioonboarding30",
+  "vendor": "desafioonboarding31",
   "version": "0.0.0",
   "title": "URL Auto Translate",
   "description": "URL Auto Translate en-US",
-  "mustUpdateAt": "2018-01-04",
+  "mustUpdateAt": "2018-01-05",
   "categories": [],
   "dependencies": {
     "vtex.catalog-graphql": "1.x",

@@ -7,8 +7,9 @@ import { parseAndValidate } from './middlewares/parse'
 import { updateURL } from './middlewares/updateURL'
 
 
-const TREE_SECONDS_MS = 4 * 1000
+//const TREE_SECONDS_MS = 4 * 1000
 const CONCURRENCY = 10
+const TIMEOUT_MS =30000
 
 const clients: ClientsConfig<Clients> = {
   implementation: Clients,
@@ -18,7 +19,7 @@ const clients: ClientsConfig<Clients> = {
       exponentialBackoffCoefficient: 2,
       initialBackoffDelay: 50,
       retries: 3,
-      timeout: TREE_SECONDS_MS,
+      timeout: TIMEOUT_MS,
       concurrency: CONCURRENCY,
     },
   },

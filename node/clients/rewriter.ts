@@ -14,7 +14,7 @@ export default class Rewriter extends ExternalClient {
     })
   }
 
-  public async postURL(productId: string, from: string, resolveAs: string, binding: string) {
+  public async postURL(productId: string, from: string, resolveAs: string, binding: string, locale:string, account: string) {
     const requestBody = {
       query: `
         mutation saveInternal($productId: String!, $from: String!, $resolveAs: String!, $binding: String!) {
@@ -39,15 +39,20 @@ export default class Rewriter extends ExternalClient {
       },
     };
 
-    return this.http.post<any>(`/_v/private/graphql/v1`, requestBody);
+    const headers = {
+      'x-vtex-locale': locale,
+      'X-Vtex-Tenant': account,
+    };
+
+    return this.http.post<any>(`/_v/private/graphql/v1`, requestBody, {headers});
   }
 
-  public async getURL(path: string) {
+  public async getURL(path: string, binding:string ) {
     const requestBody = {
       query: `
-        query path($path: String!) {
+     query path($path: String!, $binding: String!) {
   internal {
-    get(path: $path) {
+    get(path: $path, locator: {from: $path, binding: $binding}) {
       query
       from
       declarer
@@ -57,7 +62,8 @@ export default class Rewriter extends ExternalClient {
 }
 `,
       variables: {
-        path
+        path,
+        binding
       },
     };
 

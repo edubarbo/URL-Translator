@@ -13,7 +13,7 @@
   },
   "events":{
     "update": {
-      "sender": "desafioonboarding30.url-translater-auto",
+      "sender": "desafioonboarding31.url-translater-auto",
       "keys": [ "update.url" ]
     },
     "broadcasterNotification": {

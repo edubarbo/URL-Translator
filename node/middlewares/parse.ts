@@ -17,7 +17,7 @@ export async function parseAndValidate(_ctx: any) {
   ctx.status = 200
   console.log(ctx.body)
   events.sendEvent(
-    'desafioonboarding30.url-translater-auto', 
+    'desafioonboarding31.url-translater-auto', 
     'update.url',
     body
   )
