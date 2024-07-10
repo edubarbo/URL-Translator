@@ -1,6 +1,6 @@
 {
   "name": "url-translater-auto",
-  "vendor": "desafioonboarding31",
+  "vendor": "{{vendor}}",
   "version": "0.0.0",
   "title": "URL Auto Translate",
   "description": "URL Auto Translate en-US",
