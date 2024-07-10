@@ -3,7 +3,7 @@
   "vendor": "{{vendor}}",
   "version": "0.0.0",
   "title": "URL Auto Translate",
-  "description": "URL Auto Translate en-US",
+  "description": "URL Auto Translate",
   "mustUpdateAt": "2018-01-05",
   "categories": [],
   "dependencies": {
