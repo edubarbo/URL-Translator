@@ -12,7 +12,7 @@ The URL Translator app is responsible for automatically listening to the broadca
 3) Update vendor in parseAndValidate> events.sendEvent in parse.ts
 
 ## After linking the app 
-Go to your dev workspace admin, in the following path `/admin/apps/desafioonboarding31.url-translater-auto@0.0.0/setup/`, in which you have to include the bindingId in which you want to store the translated URLs and the locale of the translations.
+Go to your dev workspace admin, in the following path `/admin/apps/{{vendor}}.url-translater-auto@0.0.0/setup/`, in which you have to include the bindingId in which you want to store the translated URLs and the locale of the translations.
 
 ![URL Auto Translate](https://github.com/edubarbo/URL-Translator/assets/111549347/c672b664-f363-45c6-a73e-9abf9971b817)
 
