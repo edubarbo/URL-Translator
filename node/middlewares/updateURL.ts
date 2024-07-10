@@ -40,7 +40,7 @@ if (ctx.body.HasStockKeepingUnitModified==true) {
 
     /* Get Product URL by Locale */
     const productData = await messages.getProductLinkId(productId, settingsLocale, ctx.vtex.account)
-    const ProductLink = productData?.data?.product?.linkId ?? ''
+    const ProductLink = productData?.data?.product?.name ?? ''
     const slug = slugify(ProductLink)
     console.log (slug)
     const pdp = `/${slug}/p`; /* from */
